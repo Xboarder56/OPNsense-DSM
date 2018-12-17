@@ -1,0 +1,103 @@
+Destination IP:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\,(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\,
+Format String: $2
+
+Expression Type: Regex
+Expression: dhcpd\:.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Format String: $1
+
+Destination MAC
+Expression Type: Regex
+Expression: (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Format String: $2
+
+Destination Port
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,(\d{1,5})\,(\d{1,5})\,
+Capture Group: 2
+
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,6\,.*?\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,([\d]{1,5})\,([\d]{1,5})\,
+Capture Group: 2
+
+Event Category:
+Expression Type: Regex
+Expression: \w+\s+\d+\s+[\d:]+\s(\S+)\:
+Format String: $1
+
+Event ID:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,.*?\,.*?\,.*?\,.*?\,.*?\,(.*?)\,
+Format String: $1
+
+Expression Type: Regex
+Expression: dhcpd\:\s([\w\_]{1,15})
+Format String: $1
+
+Expression Type: Regex
+Expression: unbound\:.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\s([\w\.\-]{1,180})\.\s([A-Z]{1,10})\s([A-Z]{1,10})
+Format String: $3
+
+Hostname:
+Expression Type: Regex
+Expression: dhcpd\:.*?\((.*?)\)
+Capture Group: 1
+
+Identity Host Name:
+Expression Type: Regex
+Expression: dhcpd\:.*?\((.*?)\)
+Format String: $1
+
+Identity IP:
+Expression Type: Regex
+Expression: dhcpd\:.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Format String: $1
+
+Identity MAC
+Expression Type: regex
+Expression: (([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2}))
+Format String: $1
+
+IPv6 Destination:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,6\,.*?\,([0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45})\,([0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45})\,
+Format String: $2
+
+IPv6 Source:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,6\,.*?\,([0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45})\,([0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45})\,
+Format String: $1
+
+Log Source Time:
+Expression Type: Regex
+Expression: (\w+)\s+(\d+)\s+([\d:]+)\s
+Format String: 2018-$1-$2 $3
+Date Format: yyyy-MMM-dd hh:mm:ss
+
+Protocol:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,4\,.*?\,([\d]{1,3})\,(\w{1,6})\,\d{1,3}\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,
+Format String: $2
+
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,.*?\,.*?\,6\,.*?\,.*?\,.*?\,(.*?)\,.*?\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,
+Format String: $1
+
+Source IP:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\,(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})\,
+Format String: $1
+
+Expression Type: Regex
+Expression: unbound\:.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})
+Format String: $1
+
+Source Port:
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\,(\d{1,5})\,(\d{1,5})\,
+Capture Group: 1
+
+Expression Type: Regex
+Expression: filterlog\:\s.*?\,6\,.*?\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,[0-9a-f\:]{2,45}\:[0-9a-f\:]{2,45}\,([\d]{1,5})\,([\d]{1,5})\,
+Capture Group: 1

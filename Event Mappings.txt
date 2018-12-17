@@ -1,0 +1,63 @@
+Event ID: block
+Category: filterlog
+Name: Firewall Deny
+High Level Category: Access
+Low Level Category: Firewall Deny
+Severity: 4
+Description: Firewall Session Denied
+
+Event ID: pass
+Category: filterlog
+Name: Firewall Permit
+High Level Category: Access
+Low Level Category: Firewall Permit
+Severity: 1
+Description: Firewall Session Allowed
+
+Event ID: DHCPDISCOVER
+Category: dhcpd
+Name: DHCP Discover
+High Level Category: Application
+Low Level Category: DHCP Session Opened
+Severity: 1
+Description: DHCP Discover
+
+Event ID: DHCPACK
+Category: dhcpd
+Name: DHCP Acknowledgement
+High Level Category: Application
+Low Level Category: DHCP Success
+Severity: 1
+Description: DHCP Acknowledgement
+
+Event ID: DHCPOFFER
+Category: dhcpd
+Name: DHCP Offer
+High Level Category: Application
+Low Level Category: DHCP Session In Progress
+Severity: 1
+Description: DHCP Offer
+
+Event ID: DHCPRELEASE
+Category: dhcpd
+Name: DHCP Release
+High Level Category: Application
+Low Level Category: DHCP Session Closed
+Severity: 1
+Description: DHCP Release
+
+Event ID: Wrote
+Category: dhcpd
+Name: DHCP Lease File Modification
+High Level Category: Application
+Low Level Category: Misc
+Severity: 1
+Description: Changes were performed to the DHCP lease file.
+
+Event ID: reuse_lease
+Category: dhcpd
+Name: DHCP Reuse Existing Lease
+High Level Category: Application
+Low Level Category: DHCP Success
+Severity: 1
+Description: The DHCP server is replying to the client with the existing DHCP.
