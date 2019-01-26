@@ -20,6 +20,7 @@ Note: on the blog post listed below (whatthesec.com) they have fields for unboun
 9. Finally, you will need to create a new log source selecting the custom Log source type we just created.
 
 # Change Log
+01-26-2019 - Initial support for parsing dhclient logs. I still have to map them but they will be parsed under the correct event ID and category. Additionally, the log source time has been updated to 2019.
 12-17-2018 - Initial Upload of the source code.
 
 # Sources/References
