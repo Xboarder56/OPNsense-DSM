@@ -20,9 +20,9 @@ Note: on the blog post listed below (whatthesec.com) they have fields for unboun
 9. Finally, you will need to create a new log source selecting the custom Log source type we just created.
 
 # Change Log
-02-02-2019 - Tweaked event category parsing to avoid false positives. Parsed destination IP from dhclient logs. Mapped 13 new events for dhclient logs.
-01-26-2019 - Initial support for parsing dhclient logs. I still have to map them but they will be parsed under the correct event ID and category. Additionally, the log source time has been updated to 2019.
-12-17-2018 - Initial Upload of the source code.
+  - 02-02-2019 - Tweaked event category parsing to avoid false positives. Parsed destination IP from dhclient logs. Mapped 13 new events for dhclient logs.
+  - 01-26-2019 - Initial support for parsing dhclient logs. I still have to map them but they will be parsed under the correct event ID and category. Additionally, the log source time has been updated to 2019.
+  - 12-17-2018 - Initial Upload of the source code.
 
 # Sources/References
 - https://www.whatthesec.com/index.php/2018/07/13/sending-pfsense-logs-to-qradar/ (Created the original DSM I have only made small modifications for parsing additional fields and the Log Source Time. All the credit for this goes to him.)
