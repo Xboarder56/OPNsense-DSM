@@ -38,6 +38,14 @@ Low Level Category: DHCP Session In Progress
 Severity: 1
 Description: DHCP Offer
 
+Event ID: DHCPREQUEST
+Category: dhcpd
+Name: DHCP Request
+High Level Category: Application
+Low Level Category: DHCP Session In Progress
+Severity: 1
+Description: DHCP Request
+
 Event ID: DHCPRELEASE
 Category: dhcpd
 Name: DHCP Release
@@ -61,3 +69,83 @@ High Level Category: Application
 Low Level Category: DHCP Success
 Severity: 1
 Description: The DHCP server is replying to the client with the existing DHCP.
+
+Event ID: DHCPREQUEST
+Category: dhclient
+Name: DHCP Request
+High Level Category: Application
+Low Level Category: DHCP Session In Progress
+Severity: 1
+Description: DHCP Request
+
+Event ID: DHCPOFFER
+Category: dhclient
+Name: DHCP Offer
+High Level Category: Application
+Low Level Category: DHCP Session In Progress
+Severity: 1
+Description: DHCP Offer
+
+Event ID: DHCPACK
+Category: dhclient
+Name: DHCP Acknowledgement
+High Level Category: Application
+Low Level Category: DHCP Success
+Severity: 1
+Description: DHCP Acknowledgement
+
+Event ID: DHCPDISCOVER
+Category: dhclient
+Name: DHCP Discover
+High Level Category: Application
+Low Level Category: DHCP Session Opened
+Severity: 1
+Description: DHCP Discover
+
+Event ID: bound to
+Category: dhclient
+Name: Bound IP Address
+High Level Category: System
+Low Level Category: System Status
+Severity: 1
+Description: The IP address which the system bound to.
+
+Event ID:	Creating resolv.conf
+Category: dhclient
+Name: Updating Resolve Config File
+High Level Category: System
+Low Level Category: System Informational
+Severity: 1
+Description: Updating Resolve.conf file with details provided by the DHCP lease.
+
+Event ID:	Starting delete_old_states
+Category: dhclient
+Name: Clearing old DHCP States
+High Level Category: System
+Low Level Category: System Informational
+Severity: 1
+Description: Deleting old DHCP states.
+
+Event ID: connection closed
+Category: dhclient
+Name: DHCP Client Connection Closed
+High Level Category: System
+Low Level Category: System Status
+Severity: 1
+Description: The DHCP Client has closed the connection. Typically the process will exit after the connection is closed.
+
+Event ID:	exiting
+Category: dhclient
+Name: DHCP Client Exiting
+High Level Category: System
+Low Level Category: System Status
+Severity: 1
+Description: The DHCP Client will exit. This could be due to the process already running.
+
+Event ID: Comparing IPs
+Category: dhclient
+Name: Comparing IP Addresses
+High Level Category: System
+Low Level Category: System Informational
+Severity: 1
+Description: Comparing IP addresses to look for any changes.
